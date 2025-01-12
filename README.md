@@ -17,19 +17,19 @@ Tecnologias Utilizadas
 Python: Linguagem de programação principal.
 SQLite: Banco de dados relacional utilizado para armazenar os dados dos clientes.
 Tkinter: Biblioteca padrão do Python para criação de interfaces gráficas.
+
 Como Executar o Projeto
 Clone o repositório:
-
 git clone https://github.com/owlboy13/PYSQL---Projeto-Python-com-Estrutura-de-dados-SQL.git
-Navegue até o diretório do projeto:
 
+Navegue até o diretório do projeto:
 cd PYSQL---Projeto-Python-com-Estrutura-de-dados-SQL
+
 Instale as dependências necessárias:
 
 Certifique-se de que o Python está instalado em seu sistema. As bibliotecas Tkinter e SQLite geralmente já vêm instaladas com o Python.
 
 Execute a aplicação:
-
 python app.py
 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
