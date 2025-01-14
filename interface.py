@@ -13,21 +13,31 @@ class Gui:
         self.window = Tk()
         self.window.wm_title("PYSQL versão 1.0")
 
+        #Função limitar algarismos do cpf em 11
+        def limit_cpf(x):
+            if len(x) > 11:
+                return False
+            else:
+                return True
+
+
         # Variáveis
         self.txtNome = StringVar()
         self.txtSobrenome = StringVar()
         self.txtEmail = StringVar()
         self.txtCPF = StringVar()
+        self.limit_cpf = self.window.register(func=limit_cpf)
 
         # Widgets
         self.lblnome = Label(self.window, text="Nome")
         self.lblsobrenome = Label(self.window, text="Sobrenome")
         self.lblemail = Label(self.window, text="Email")
-        self.lblcpf = Label(self.window, text="CPF")
+        self.lblcpf = Label(self.window, text="CPF (apenas números)")
         self.entNome = Entry(self.window, textvariable=self.txtNome, width=self.width_entry)
         self.entSobrenome = Entry(self.window, textvariable=self.txtSobrenome, width=self.width_entry)
         self.entEmail = Entry(self.window, textvariable=self.txtEmail, width=self.width_entry)
-        self.entCPF = Entry(self.window, textvariable=self.txtCPF, width=self.width_entry)
+        # self.entCPF = Entry(self.window, textvariable=self.txtCPF, width=self.width_entry)
+        self.entCPF = Entry(self.window, textvariable=self.txtCPF, width=self.width_entry, validate='key', validatecommand=(self.limit_cpf, '%P'))
 
         self.listClientes = Listbox(self.window, width=100)
         self.scrollClientes = Scrollbar(self.window)
