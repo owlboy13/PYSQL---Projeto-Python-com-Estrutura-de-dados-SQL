@@ -13,7 +13,7 @@ class Gui:
         self.window = Tk()
         self.window.wm_title("PYSQL versão 1.0")
 
-        #Função limitar algarismos do cpf em 11
+        #Função para limitar algarismos do cpf em 11
         def limit_cpf(x):
             if len(x) > 11:
                 return False
